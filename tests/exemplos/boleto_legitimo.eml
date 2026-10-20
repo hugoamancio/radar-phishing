@@ -1,0 +1,16 @@
+From: "Bradesco" <faturas@bradesco.com.br>
+To: cliente@exemplo.com
+Subject: Sua fatura chegou
+Date: Tue, 20 Oct 2026 09:30:00 -0300
+Message-ID: <exemplo-ficticio-005@bradesco.com.br>
+X-Exemplo: e-mail ficticio criado para os testes do Radar Phishing
+Authentication-Results: mx.google.com; spf=pass
+ smtp.mailfrom=retorno@bradesco.com.br; dkim=pass header.i=@bradesco.com.br;
+ dmarc=pass header.from=bradesco.com.br
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Ol=C3=A1! A fatura do seu cart=C3=A3o Bradesco, no valor de R$ 450,00, vence =
+em 30/10/2026. Linha digit=C3=A1vel: 23793.38128 60000.000004 00000.000406 9 =
+16150000045000 (Mensagem fict=C3=ADcia para testes.)

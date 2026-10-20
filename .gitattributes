@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# E-mails de exemplo ficam byte a byte como estao (os testes dependem disso).
+*.eml -text

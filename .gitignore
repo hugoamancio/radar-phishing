@@ -1,0 +1,26 @@
+# Segredos: credencial de verdade (tokens do Telegram/Discord) entra por .env
+.env
+.env.*
+!.env.example
+
+# E-mails analisados podem conter dado pessoal (LGPD) - nunca versionar
+dados/*
+!dados/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Sistema operacional e editores
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Configuracao local do editor/assistente
+.claude/

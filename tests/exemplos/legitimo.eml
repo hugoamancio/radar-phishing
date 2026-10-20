@@ -1,0 +1,20 @@
+Return-Path: <retorno@bradesco.com.br>
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of retorno@bradesco.com.br designates 192.0.2.10 as permitted sender) smtp.mailfrom=retorno@bradesco.com.br;
+       dkim=pass header.i=@bradesco.com.br header.s=sel1 header.b=AbCdEf12;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bradesco.com.br
+From: "Bradesco" <comunicados@bradesco.com.br>
+To: cliente@exemplo.com
+Subject: Novidades no aplicativo
+Date: Fri, 16 Oct 2026 10:00:00 -0300
+Message-ID: <exemplo-ficticio-003@bradesco.com.br>
+X-Exemplo: e-mail ficticio criado para os testes do Radar Phishing
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<p>Olá! O aplicativo ganhou um novo visual para a área de investimentos.</p>
+<p>Saiba mais em <a href="https://banco.bradesco/novidades">banco.bradesco/novidades</a>.</p>
+<p>O Bradesco nunca pede sua senha por e-mail. (Mensagem fictícia para testes.)</p>
+</body></html>

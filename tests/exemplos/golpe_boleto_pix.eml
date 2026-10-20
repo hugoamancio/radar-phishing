@@ -1,0 +1,94 @@
+From: "Bradesco Cobranca" <cobranca@bradesco-faturas.top>
+To: cliente@exemplo.com
+Subject: Fatura do cartao Bradesco disponivel
+Date: Tue, 20 Oct 2026 09:30:00 -0300
+Message-ID: <exemplo-ficticio-004@bradesco-faturas.top>
+X-Exemplo: e-mail ficticio criado para os testes do Radar Phishing
+Authentication-Results: mx.google.com; spf=fail
+ smtp.mailfrom=bradesco-faturas.top; dkim=none; dmarc=fail
+ header.from=bradesco-faturas.top
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7116957656136831695=="
+
+--===============7116957656136831695==
+Content-Type: multipart/alternative;
+ boundary="===============1104836228268653062=="
+
+--===============1104836228268653062==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Prezado cliente, sua fatura do cartao Bradesco no valor de R$ 450,00 esta dis=
+ponivel. Pague pelo boleto em anexo ou pelo QR Code Pix abaixo. (Mensagem fic=
+ticia para testes.)
+
+--===============1104836228268653062==
+MIME-Version: 1.0
+Content-Type: multipart/related;
+ boundary="===============2866600888640898686=="
+
+--===============2866600888640898686==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Prezado cliente, sua fatura do cartao Bradesco no valor de R$ =
+450,00 esta disponivel. Pague pelo boleto em anexo ou pelo QR Code Pix abaixo=
+. (Mensagem ficticia para testes.)</p><img src=3D"cid:qrpix"></body></html>
+
+--===============2866600888640898686==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <qrpix>
+MIME-Version: 1.0
+Content-Disposition: inline
+
+iVBORw0KGgoAAAANSUhEUgAAAVYAAAFWAQAAAAAa1IguAAADAElEQVR42u1bW27EMAhEzQF8JF+d
+I+UAlqiZgSSV9qO/7SRarZLUP2YN84Ba/Ppa9q59175r5dZaXjO/xn4xbfi+PU5b+3HEvsnHvfbL
+fn/9tbUZh73HOPf2d0DmQkDiNGx/P+6byTX/Pw5nbdby15+5Zcvvfb+G72/Do0gc8js8U2N4J02+
+CbE4RPiOwEJS4L0f+SaE4oD6sHMhsyAyEQLHI/A+ZOoD8QKp8fGjghe8dihYE/bByPMQjpSZN8YK
+1AeWhayQ56zjgQrJN8gXgbwYQQaFY8DLKyyRlZMIolAnwScnQmEMC1GDETCNOBAxk0MmQNw5QqaN
+BJGokyCN2DtINTlkpgYwlGHRwAsHOiSZbDpBkeUMS6otCbyYFBSQV6wSFFyzQkFI/f94UbKi6mGy
+61niAnhhGueBR4KPB1UGYJS8AmhiIcKrEyu9jgTAgkKDJ0GkTpItoEQkb0QErJVm3ojkBZRmpQbi
+QAcGiiNVp+MjoS9aZCVqAD0db1gr4EJo5AWPgYFBUVXReym1pVEnV9/TgYlyaIEX9K418oLgCGpd
+chtlAfmCs0FvSoJXn9SbxsrAmDAsdKUk4nCyPNKnxa6Jm/2nMvMF9OYlsckhaUk97SkV3EQLjx09
+9LaKTLJ0iPiTUJT2qIqVF8fDtNfBC0aDBj4Mh6JSYvqi2rtR7LqYZN4UoVLwab1da4+n7i6kcOov
+BT+qWHSb1RUKfAAoGj5MsQU/aFlHmQ/cfrnZGr4cmzVXCwNdDG/zQUV339lR7tMsgKgZoSnCJ4+e
+Ajq6l9etvVlNHJE+Dn/3EaW+u7nJMaElcx6IkpfCoproNh9cKQ19sa6pmIgeHYwfURLp+7OBRfYI
+374GCMX0ZrVymj3e8zBNIUT4JH9xa8l5Sy3yTLF5uXZlu1qCWlOJ21CZjyI+rod9TR5V8lPDp615
+Whp0FFlm13gtJ4V05mmvaQfjMC06etAdIcIna56WPe6CzkuGOytn6ODFRa1H3KB5Tp35yff/cd61
+79p37ae13/8DnZSGJyVtAAAAAElFTkSuQmCC
+
+--===============2866600888640898686==--
+
+--===============1104836228268653062==--
+
+--===============7116957656136831695==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="fatura_bradesco.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjMKMSAwIG9iago8PAovQ291bnQgMQovS2lkcyBbMyAwIFJdCi9NZWRpYUJveCBbMCAw
+IDU5NS4yOCA4NDEuODldCi9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMiAwIG9iago8PAovT3BlbkFj
+dGlvbiBbMyAwIFIgL0ZpdEggbnVsbF0KL1BhZ2VMYXlvdXQgL09uZUNvbHVtbgovUGFnZXMgMSAw
+IFIKL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL0NvbnRlbnRzIDQgMCBSCi9Q
+YXJlbnQgMSAwIFIKL1Jlc291cmNlcyA3IDAgUgovVHlwZSAvUGFnZQo+PgplbmRvYmoKNCAwIG9i
+ago8PAovRmlsdGVyIC9GbGF0ZURlY29kZQovTGVuZ3RoIDIyMwo+PgpzdHJlYW0KeJxtzzFPwzAQ
+BeC9v+INDCCBc+fEsdOxgg5MqLLYLTulRjRGSSr+Pk4IAkQsL2fpfb4n8bghoTQ+NjuLYs/gShDB
+HvFgp6eSBRvoRgnWsAHXezdeeodd70I7+IQ7MBWSZH0D+7qEZofXHJ0/q2fnPvnLue3GhGP0Y/Qx
+4d1leGyHfBESDi64Hk+nOJxi9/KLX6xKC2Nm69m9pX6KhG90i8MVWJiGbon+R6USkr6ibefjEimp
+WOsiwXKlS20yImekrLjJdRujFWpVlVLwNOi/QwWuWVE+nPf6WesT+3dfmQplbmRzdHJlYW0KZW5k
+b2JqCjUgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL0VuY29kaW5nIC9XaW5BbnNpRW5j
+b2RpbmcKL1N1YnR5cGUgL1R5cGUxCi9UeXBlIC9Gb250Cj4+CmVuZG9iago2IDAgb2JqCjw8Ci9C
+YXNlRm9udCAvQ291cmllcgovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovU3VidHlwZSAvVHlw
+ZTEKL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0ZvbnQgPDwvRjEgNSAwIFIKL0Yy
+IDYgMCBSPj4KL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCj4+
+CmVuZG9iago4IDAgb2JqCjw8Ci9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTkxNjIzMDRaKQo+Pgpl
+bmRvYmoKeHJlZgowIDkKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAwIG4gCjAw
+MDAwMDAwOTYgMDAwMDAgbiAKMDAwMDAwMDE5OSAwMDAwMCBuIAowMDAwMDAwMjc5IDAwMDAwIG4g
+CjAwMDAwMDA1NzQgMDAwMDAgbiAKMDAwMDAwMDY3MSAwMDAwMCBuIAowMDAwMDAwNzY2IDAwMDAw
+IG4gCjAwMDAwMDA4NjMgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSA5Ci9Sb290IDIgMCBSCi9J
+bmZvIDggMCBSCi9JRCBbPDI4NzI2MjkzRTU4Qzg1MDk2RDQyNjVCMUU5OTM3QkM4PjwyODcyNjI5
+M0U1OEM4NTA5NkQ0MjY1QjFFOTkzN0JDOD5dCj4+CnN0YXJ0eHJlZgo5MTgKJSVFT0YK
+
+--===============7116957656136831695==--

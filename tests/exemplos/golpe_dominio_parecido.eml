@@ -1,0 +1,41 @@
+Return-Path: <bounce@bradesco-seguranca.top>
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning bounce@bradesco-seguranca.top does not designate 203.0.113.45 as permitted sender) smtp.mailfrom=bounce@bradesco-seguranca.top;
+       dkim=none;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=bradesco-seguranca.top
+From: "Bradesco Atendimento" <aviso@bradesco-seguranca.top>
+Reply-To: suporte.cliente2026@gmail.com
+To: cliente@exemplo.com
+Subject: Sua conta sera bloqueada - regularize hoje mesmo
+Date: Mon, 19 Oct 2026 08:14:02 -0300
+Message-ID: <exemplo-ficticio-001@bradesco-seguranca.top>
+X-Exemplo: e-mail ficticio criado para os testes do Radar Phishing
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="limite-001"
+
+--limite-001
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Prezado cliente,
+
+Identificamos uma compra não reconhecida no seu cartão. Por segurança, sua conta será bloqueada em até 24 horas.
+Para evitar o bloqueio, atualize seus dados e confirme a senha do cartão no link abaixo.
+
+Acesse: www.bradesco.com.br
+
+(Mensagem fictícia para testes.)
+
+--limite-001
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><body style="font-family:Arial">
+<p>Prezado cliente,</p>
+<p>Identificamos uma <b>compra não reconhecida</b> no seu cartão. Por segurança, sua conta será bloqueada em até 24 horas.</p>
+<p>Para evitar o bloqueio, atualize seus dados e confirme a senha do cartão no link abaixo.</p>
+<p><a href="https://bradesco-app-seguro.xyz/login?cliente=8812">www.bradesco.com.br</a></p>
+<p style="color:#888">(Mensagem fictícia para testes.)</p>
+</body></html>
+
+--limite-001--

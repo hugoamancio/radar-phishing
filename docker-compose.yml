@@ -1,0 +1,42 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: radar_db
+    environment:
+      POSTGRES_DB: radar
+      POSTGRES_USER: analista
+      # A senha vem do .env (que o Git ignora): copie .env.example para .env.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
+    ports:
+      # 5433 para nao colidir com o banco do honeypot-analytics (5432).
+      # 127.0.0.1: so este computador conecta; sem isso, qualquer aparelho do Wi-Fi tentaria.
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Roda em ordem alfabetica no primeiro start: 01_, 02_, ...
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U analista -d radar"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Leitor dos CT logs. Conecta direto nos logs publicos (Google, Cloudflare,
+  # Let's Encrypt...) e repassa cada certificado novo por WebSocket, no mesmo
+  # formato do antigo CertStream publico, que hoje nao entrega dados.
+  certstream:
+    image: 0rickyy0/certstream-server-go:v1.10.1
+    container_name: radar_certstream
+    ports:
+      - "127.0.0.1:8080:8080"     # so este computador recebe o fluxo
+    # Sem limite ele chega a usar 3+ nucleos. Com 1 nucleo pode perder parte
+    # dos certificados nos picos, mas cada certificado vai para 2 ou mais
+    # logs, o que compensa boa parte da perda.
+    cpus: 1.0
+    # 256 MB bastava ao ligar, mas depois de horas o servidor chegou a 252/256 MB,
+    # travou sem memoria e parou de enviar (o dashboard acusou "monitor parado").
+    mem_limit: 384m
+    restart: unless-stopped
+
+volumes:
+  pgdata:

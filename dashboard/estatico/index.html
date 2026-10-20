@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Phishing</title>
+  <link rel="icon" href="/estatico/icone.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/estatico/estilo.css">
+  <script src="/estatico/app.js" defer></script>
+</head>
+<body>
+  <div class="faixa-demo" id="faixa-demo" hidden>Demonstração · dados fictícios</div>
+
+  <header class="topo">
+    <div class="marca">
+      <svg class="marca-icone" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" />
+        <circle cx="16" cy="16" r="7.5" />
+        <path d="M16 16 L26 7" />
+        <circle class="ponto" cx="22.5" cy="10.5" r="2" />
+      </svg>
+      <div>
+        <h1>Radar<span>//</span>Phishing</h1>
+        <p class="subtitulo">Golpes contra clientes de banco · CT logs, e-mail, SMS e WhatsApp</p>
+      </div>
+    </div>
+    <div class="topo-direita">
+      <span class="status" id="status"><span class="luz"></span><span id="status-texto">conectando…</span></span>
+      <time class="relogio" id="relogio">--:--:--</time>
+    </div>
+  </header>
+
+  <main>
+    <section class="busca" aria-labelledby="titulo-busca">
+      <h2 id="titulo-busca" class="rotulo">Pesquisar endereço suspeito</h2>
+      <form id="form-busca" autocomplete="off">
+        <span class="prompt" aria-hidden="true">&gt;</span>
+        <input id="campo-busca" name="q" type="text" maxlength="500" spellcheck="false"
+               placeholder="cole a URL ou o domínio: https://site-suspeito.xyz/login"
+               aria-label="URL ou domínio para pesquisar">
+        <button type="submit">Pesquisar</button>
+      </form>
+      <p class="nota-busca">O endereço nunca é acessado: a pesquisa só consulta o banco e o detector.</p>
+      <div id="resultado-busca" class="resultado-busca" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="kpis" aria-label="Indicadores">
+      <article class="kpi">
+        <h2 class="rotulo">Domínios suspeitos</h2>
+        <p class="kpi-valor" id="kpi-suspeitos">—</p>
+        <p class="kpi-detalhe" id="kpi-suspeitos-24h">—</p>
+      </article>
+      <article class="kpi">
+        <h2 class="rotulo">Risco crítico</h2>
+        <p class="kpi-valor" id="kpi-criticos">—</p>
+        <p class="kpi-detalhe" id="kpi-criticos-detalhe">—</p>
+      </article>
+      <article class="kpi">
+        <h2 class="rotulo">Golpes recebidos</h2>
+        <p class="kpi-valor" id="kpi-recebidos">—</p>
+        <p class="kpi-detalhe" id="kpi-recebidos-detalhe">—</p>
+      </article>
+      <article class="kpi">
+        <h2 class="rotulo">Conhecidos antes de chegar</h2>
+        <p class="kpi-valor" id="kpi-antes">—</p>
+        <p class="kpi-detalhe" id="kpi-antes-detalhe">—</p>
+      </article>
+    </section>
+
+    <section class="grade grade-2-1">
+      <article class="cartao">
+        <header class="cartao-topo">
+          <h2>Detecções por dia</h2>
+          <p class="legenda-cartao">Domínios suspeitos vistos nos CT logs · últimos 14 dias</p>
+        </header>
+        <div class="grafico" id="grafico-serie" role="img" aria-label="Gráfico de linha: detecções por dia"></div>
+      </article>
+      <article class="cartao">
+        <header class="cartao-topo">
+          <h2>Técnicas mais usadas</h2>
+          <p class="legenda-cartao">Técnica principal de cada domínio</p>
+        </header>
+        <div class="barras" id="grafico-tecnicas"></div>
+      </article>
+    </section>
+
+    <section class="grade grade-1-2">
+      <article class="cartao">
+        <header class="cartao-topo">
+          <h2>Nível de risco</h2>
+          <p class="legenda-cartao">Domínios por faixa de nota</p>
+        </header>
+        <div class="barras" id="grafico-niveis"></div>
+        <ul class="faixas" id="faixas-risco" aria-label="O que cada nível quer dizer"></ul>
+      </article>
+      <article class="cartao">
+        <header class="cartao-topo">
+          <h2>Cruzamento</h2>
+          <p class="legenda-cartao">O golpe já era conhecido nos CT logs antes de chegar?</p>
+        </header>
+        <div class="cruzamento">
+          <div class="anel" id="anel-cruzamento"></div>
+          <ol class="linha-tempo" id="lista-cruzamento"></ol>
+        </div>
+      </article>
+    </section>
+
+    <section class="grade grade-2-1">
+      <article class="cartao">
+        <header class="cartao-topo">
+          <h2>Detecções recentes</h2>
+          <p class="legenda-cartao">Em destaque, o trecho que imita a marca</p>
+        </header>
+        <div class="tabela-rolagem">
+          <table class="tabela">
+            <thead><tr><th>Risco</th><th>Domínio</th><th>Técnica</th><th>Emissor</th><th>Quando</th></tr></thead>
+            <tbody id="tabela-deteccoes"></tbody>
+          </table>
+        </div>
+      </article>
+      <article class="cartao">
+        <header class="cartao-topo">
+          <h2>E-mails e mensagens</h2>
+          <p class="legenda-cartao">Últimos analisados</p>
+        </header>
+        <ul class="recebidos" id="lista-recebidos"></ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <span>Radar Phishing · só dados públicos (CT logs) e mensagens próprias ou autorizadas · LGPD</span>
+    <span id="atualizado">—</span>
+  </footer>
+
+  <div class="dica" id="dica" role="tooltip" hidden></div>
+</body>
+</html>

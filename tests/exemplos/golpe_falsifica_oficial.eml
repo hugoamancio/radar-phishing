@@ -1,0 +1,37 @@
+Return-Path: <envio@disparos-em-massa.ru>
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of envio@disparos-em-massa.ru does not designate 198.51.100.7 as permitted sender) smtp.mailfrom=envio@disparos-em-massa.ru;
+       dkim=none;
+       dmarc=fail (p=REJECT sp=REJECT dis=QUARANTINE) header.from=bradesco.com.br
+Authentication-Results: servidor-do-golpista.ru;
+       spf=pass smtp.mailfrom=bradesco.com.br;
+       dkim=pass header.d=bradesco.com.br;
+       dmarc=pass header.from=bradesco.com.br
+From: "Bradesco" <comunicado@bradesco.com.br>
+To: cliente@exemplo.com
+Subject: =?utf-8?q?Voc=C3=AA_foi_selecionado=3A_resgate_seus_pontos?=
+Date: Sun, 18 Oct 2026 21:40:11 -0300
+Message-ID: <exemplo-ficticio-002@disparos-em-massa.ru>
+X-Exemplo: e-mail ficticio criado para os testes do Radar Phishing
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="limite-002"
+
+--limite-002
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><body>
+<p>Parabéns! Você foi selecionado para resgatar seus pontos antes que expirem hoje.</p>
+<p><a href="https://bit.ly/3resgate-pontos">Resgatar agora</a></p>
+<p><a href="http://www.bradesco.com.br@198.51.100.7/pontos">http://www.bradesco.com.br/pontos</a></p>
+<p>Veja a fatura em anexo. (Mensagem fictícia para testes.)</p>
+</body></html>
+
+--limite-002
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="Fatura_Outubro.pdf.exe"
+Content-Transfer-Encoding: base64
+
+Y29udGV1ZG8gZmljdGljaW8gcGFyYSB0ZXN0ZXM=
+
+--limite-002--
